@@ -10,9 +10,11 @@ app.post("/api/chat", async (req, res) => {
   const { message } = req.body;
 
   try {
-    const aiResponse = await axios.post("http://localhost:8000/generate", {
+    
+    const aiResponse = await axios.post("http://langchain-api:8000/generate", {
       message,
     });
+
     res.json({
       user: message,
       ai: aiResponse.data.response,

@@ -8,5 +8,5 @@ class Prompt(BaseModel):
 
 @app.post("/generate")
 def generate(prompt: Prompt):
-    # Fake AI logic (replace with LangChain/OpenAI later)
+
     return {"response": f"AI says: You said '{prompt.message}'"}
